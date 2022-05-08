@@ -3,8 +3,9 @@
 # Change to preferred versions
 MPV_VERSION="0.34.1"
 # https://github.com/mpv-player/mpv
-FFMPEG_VERSION="5.0.1"
+FFMPEG_VERSION="4.4.2"
 # http://www.ffmpeg.org/releases/
+
 LIBASS_VERSION="0.15.2"
 # https://github.com/libass/libass
 FREETYPE_VERSION="2.10.0"
@@ -13,6 +14,7 @@ HARFBUZZ_VERSION="4.2.1"
 # https://github.com/harfbuzz/harfbuzz/releases
 FRIBIDI_VERSION="1.0.12"
 # https://github.com/fribidi/fribidi/releases
+
 UCHARDET_VERSION="0.0.7"
 # https://www.freedesktop.org/software/uchardet/releases 
 

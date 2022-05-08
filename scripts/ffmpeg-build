@@ -12,6 +12,8 @@ FFMPEG_OPTIONS="${COMMON_OPTIONS%% *} \
 		--enable-pic \
 		--enable-shared \
 		--enable-openssl \
+		--enable-protocol=http \
+		--enable-protocol=https \
 		--disable-outdev=audiotoolbox \
 		--disable-indev=avfoundation"
 
