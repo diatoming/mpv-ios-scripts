@@ -12,6 +12,7 @@ FFMPEG_OPTIONS="${COMMON_OPTIONS%% *} \
 		--enable-pic \
 		--enable-shared \
 		--enable-openssl \
+		--disable-outdev=audiotoolbox \
 		--disable-indev=avfoundation"
 
 if [[ "$ARCH" = "x86_64" ]]; then

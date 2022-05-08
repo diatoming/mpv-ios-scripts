@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 LIBRARIES="libuchardet libfribidi libfreetype libharfbuzz libass ffmpeg libmpv"
-OPENSSL="$(pwd)/openssl"
+OPENSSL="$(pwd)/openssl-tv"
 
 export PKG_CONFIG_PATH
 export LDFLAGS

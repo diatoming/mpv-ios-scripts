@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 LIBRARIES="libuchardet libfribidi libfreetype libharfbuzz libass ffmpeg libmpv libavcodec libavdevice libavfilter libavformat libavutil libswresample libswscale"
-OPENSSL="$(pwd)/openssl"
+OPENSSL="$(pwd)/openssl-tv"
 ROOT="$(pwd)"
 SCRATCH="$ROOT/scratch-tv"
 LIB="$ROOT/lib-tv"
@@ -13,5 +13,5 @@ for LIBRARY in $LIBRARIES; do
     fi
 done
 
-cp $OPENSSL/lib/libcrypto-tvOS.a $LIB/libcrypto.a
-cp $OPENSSL/lib/libssl-tvOS.a $LIB/libssl.a
+cp $OPENSSL/lib/libcrypto.a $LIB/libcrypto.a
+cp $OPENSSL/lib/libssl.a $LIB/libssl.a
