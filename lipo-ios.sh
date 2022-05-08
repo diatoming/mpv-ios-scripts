@@ -13,7 +13,7 @@ for LIBRARY in $LIBRARIES; do
     fi
     if [[ "$LIBRARY" = "libavcodec" ]]; then
         zip -r -j $LIB/$LIBRARY.a.zip $LIB/$LIBRARY.a
-        rm -f $LIB/$LIBRARY.a
+        # rm -f $LIB/$LIBRARY.a
     fi
 done
 
