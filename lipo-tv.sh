@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 LIBRARIES="libuchardet libfribidi libfreetype libharfbuzz libass ffmpeg libmpv libavcodec libavdevice libavfilter libavformat libavutil libswresample libswscale"
-OPENSSL="$(pwd)/openssl-tv"
+OPENSSL="$(pwd)/openssl"
 ROOT="$(pwd)"
 SCRATCH="$ROOT/scratch-tv"
 LIB="$ROOT/lib-tv"
