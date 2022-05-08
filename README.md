@@ -2,26 +2,24 @@
 
 These are build scripts for building [libmpv](https://github.com/mpv-player/mpv), and its dependencies:
 
-* FFmpeg
-* libass
-* freetype
-* harfbuzz
-* fribidi
-* uchardet
-
-Currently used to help build [Outplayer](http://get.outplayer.app) on iOS.
+- FFmpeg
+- libass
+- freetype
+- harfbuzz
+- fribidi
+- uchardet
 
 ## Configuration
 
 Tested with:
 
-* macOS 10.15.4
-* Xcode 11.3.1
+- macOS 10.15.4
+- Xcode 11.3.1
 
 ## Usage
 
 1. [Build OpenSSL](https://github.com/x2on/OpenSSL-for-iPhone/tree/OpenSSL-1.0.2l) for iOS and tvOS
-2. Copy built OpenSSL libraries to `./openssl-ios` and `./openssl-tv`
+2. Copy built OpenSSL libraries to `./openssl`
 3. Run `./download.sh` to download and unarchive the projects' source
 4. Run `./build-ios.sh -e ENVIRONMENT`, where environment is one of:
 
