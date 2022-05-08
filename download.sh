@@ -1,20 +1,28 @@
 #!/bin/sh -e
 
 # Change to preferred versions
-MPV_VERSION="0.34.0"
-FFMPEG_VERSION="4.4"
-LIBASS_VERSION="0.14.0"
+MPV_VERSION="0.34.1"
+# https://github.com/mpv-player/mpv
+FFMPEG_VERSION="5.0.1"
+# http://www.ffmpeg.org/releases/
+LIBASS_VERSION="0.15.2"
+# https://github.com/libass/libass
 FREETYPE_VERSION="2.10.0"
-HARFBUZZ_VERSION="2.6.4"
-FRIBIDI_VERSION="1.0.8"
-UCHARDET_VERSION="0.0.6"
+# https://download.savannah.gnu.org/releases/freetype/
+HARFBUZZ_VERSION="4.2.1"
+# https://github.com/harfbuzz/harfbuzz/releases
+FRIBIDI_VERSION="1.0.12"
+# https://github.com/fribidi/fribidi/releases
+UCHARDET_VERSION="0.0.7"
+# https://www.freedesktop.org/software/uchardet/releases 
 
 MPV_URL="https://github.com/mpv-player/mpv/archive/v$MPV_VERSION.tar.gz"
 FFMPEG_URL="http://www.ffmpeg.org/releases/ffmpeg-$FFMPEG_VERSION.tar.bz2"
 LIBASS_URL="https://github.com/libass/libass/releases/download/$LIBASS_VERSION/libass-$LIBASS_VERSION.tar.gz"
 FREETYPE_URL="https://sourceforge.net/projects/freetype/files/freetype2/$FREETYPE_VERSION/freetype-$FREETYPE_VERSION.tar.bz2"
-HARFBUZZ_URL="https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-$HARFBUZZ_VERSION.tar.xz"
-FRIBIDI_URL="https://github.com/fribidi/fribidi/releases/download/v$FRIBIDI_VERSION/fribidi-$FRIBIDI_VERSION.tar.bz2"
+# HARFBUZZ_URL="https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-$HARFBUZZ_VERSION.tar.xz"
+HARFBUZZ_URL="https://github.com/harfbuzz/harfbuzz/releases/download/$HARFBUZZ_VERSION/harfbuzz-$HARFBUZZ_VERSION.tar.xz"
+FRIBIDI_URL="https://github.com/fribidi/fribidi/releases/download/v$FRIBIDI_VERSION/fribidi-$FRIBIDI_VERSION.tar.xz"
 UCHARDET_URL="https://www.freedesktop.org/software/uchardet/releases/uchardet-$UCHARDET_VERSION.tar.xz"
 
 rm -rf src

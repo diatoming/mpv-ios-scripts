@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 LIBRARIES="libuchardet libfribidi libfreetype libharfbuzz libass ffmpeg libmpv"
-OPENSSL="$(pwd)/openssl-tv"
+OPENSSL="$(pwd)/openssl"
 
 export PKG_CONFIG_PATH
 export LDFLAGS
@@ -25,7 +25,7 @@ case $OPTION in
 done
 
 export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/:$PATH"
-DEPLOYMENT_TARGET="11.0"
+DEPLOYMENT_TARGET="15.0"
 
 if [[ "$ENVIRONMENT" = "distribution" ]]; then
     ARCHS="arm64"

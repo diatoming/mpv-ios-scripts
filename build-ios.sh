@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 LIBRARIES="libuchardet libfribidi libfreetype libharfbuzz libass ffmpeg libmpv"
-OPENSSL="$(pwd)/openssl-ios"
+OPENSSL="$(pwd)/openssl"
 
 export PKG_CONFIG_PATH
 export LDFLAGS
@@ -45,14 +45,14 @@ export SRC="$ROOT/src"
 
 for ARCH in $ARCHS; do
     if [[ $ARCH = "arm64" ]]; then
-        DEPLOYMENT_TARGET="11.0"
+        DEPLOYMENT_TARGET="15.0"
         HOSTFLAG="aarch64"
         PLATFORM="iPhoneOS"
 		export SDKPATH="$(xcodebuild -sdk iphoneos -version Path)"
 		ACFLAGS="-arch $ARCH -isysroot $SDKPATH -mios-version-min=$DEPLOYMENT_TARGET"
 		ALDFLAGS="-arch $ARCH -isysroot $SDKPATH -Wl,-ios_version_min,$DEPLOYMENT_TARGET -lbz2"
 	elif [[ $ARCH = "x86_64" ]]; then
-        DEPLOYMENT_TARGET="11.0"
+        DEPLOYMENT_TARGET="15.0"
         HOSTFLAG="x86_64"
         PLATFORM="iPhoneSimulator"
 		export SDKPATH="$(xcodebuild -sdk iphonesimulator -version Path)"

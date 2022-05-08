@@ -13,5 +13,5 @@ for LIBRARY in $LIBRARIES; do
     fi
 done
 
-cp $OPENSSL/lib/libcrypto.a $LIB/libcrypto.a
-cp $OPENSSL/lib/libssl.a $LIB/libssl.a
+cp $OPENSSL/lib/libcrypto-tvOS.a $LIB/libcrypto.a
+cp $OPENSSL/lib/libssl-tvOS.a $LIB/libssl.a
