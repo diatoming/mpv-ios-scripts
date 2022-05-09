@@ -3,7 +3,7 @@
 # Change to preferred versions
 MPV_VERSION="0.34.1"
 # https://github.com/mpv-player/mpv
-FFMPEG_VERSION="4.4.2"
+FFMPEG_VERSION="5.0.1"
 # http://www.ffmpeg.org/releases/
 
 LIBASS_VERSION="0.15.2"
@@ -41,6 +41,7 @@ done
 sed -i "" "s/typedef ptrdiff_t GLsizeiptr;/typedef intptr_t GLsizeiptr;/" ./src/mpv-$MPV_VERSION/video/out/opengl/gl_headers.h;
 
 patch -p0 < mpv-patch.diff
+patch -p0 < ffmpeg-patch.diff
 
 echo "\033[1;32mDownloaded: \033[0m\n mpv: $MPV_VERSION \
                             \n FFmpeg: $FFMPEG_VERSION \
