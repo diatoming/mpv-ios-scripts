@@ -37,3 +37,5 @@ brew install --build-from-source --only-dependencies mpv
 並非所有的 openssl 版本號都可用，最後測試 1.1.1w 可正常通過編譯。
 
 本腳本拋棄了 development 參數，不關心 development 的可編譯性問題。
+
+如若遇到缺少 gas-preprocessor 提示，請執行 `install-gas-preprocessor.sh`
