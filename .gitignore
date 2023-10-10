@@ -9,3 +9,4 @@ openssl-tv/
 openssl/
 lib/
 .DS_Store
+openssl-src/
