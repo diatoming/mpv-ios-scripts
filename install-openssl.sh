@@ -7,15 +7,14 @@ TVOS_FOLDER="AppleTVOS$TVOS_SDK_VERSION-arm64.sdk"
 IOS_FOLDER="iPhoneOS$IOS_SDK_VERSION-arm64.sdk"
 
 rm -rf openssl
-rm -rf openssl-src
-
-git clone https://github.com/jasonacox/Build-OpenSSL-cURL.git openssl-src/
+# rm -rf openssl-src
+# git clone https://github.com/jasonacox/Build-OpenSSL-cURL.git openssl-src/
 cd openssl-src
 
-./build.sh -o $OPENSSL_VERSION
+# ./build.sh -o $OPENSSL_VERSION
 
 cd ..
 mkdir -p openssl/$IOS_FOLDER
 mkdir -p openssl/$TVOS_FOLDER
-cp -r ./openssl-src/openssl/iOS-fat/ ./openssl/$IOS_FOLDER/
+cp -r ./openssl-src/openssl/iOS/ ./openssl/$IOS_FOLDER/
 cp -r ./openssl-src/openssl/tvOS/ ./openssl/$TVOS_FOLDER/
