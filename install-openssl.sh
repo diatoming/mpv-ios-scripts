@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-OPENSSL_VERSION="1.1.1k"
+OPENSSL_VERSION="1.1.1w"
 IOS_SDK_VERSION=$(xcrun -sdk iphoneos --show-sdk-version)
 TVOS_SDK_VERSION=$(xcrun -sdk appletvos --show-sdk-version)
 TVOS_FOLDER="AppleTVOS$TVOS_SDK_VERSION-arm64.sdk"

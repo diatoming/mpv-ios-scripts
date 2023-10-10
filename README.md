@@ -34,6 +34,6 @@ brew install --build-from-source --only-dependencies mpv
 3. 等待構建完畢即可，lib 文件夾就是所需要的靜態庫內容。
 
 如果需要更新 openssl 版本號，修改 `install-openssl.sh` 中的 version 即可。
-並非所有的 openssl 版本號都可用，最後測試 1.1.1k 可正常通過編譯。
+並非所有的 openssl 版本號都可用，最後測試 1.1.1w 可正常通過編譯。
 
 本腳本拋棄了 development 參數，不關心 development 的可編譯性問題。
