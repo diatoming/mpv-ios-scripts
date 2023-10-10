@@ -31,3 +31,12 @@ Tested with:
 To build for tvOS, run `./build-tv.sh` and `./lipo-tv.sh` instead.
 
 Alternatively, run `./build.sh` to build and create fat static libraries for iOS and tvOS from the development and distribution architectures.
+
+## Brew
+
+https://gist.github.com/dbrookman/74b8bcfb37a23452f7137b83bca9580f
+
+```
+brew install pkg-config brotli
+brew install --build-from-source --only-dependencies mpv
+```
