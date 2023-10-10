@@ -13,24 +13,8 @@ These are build scripts for building [libmpv](https://github.com/mpv-player/mpv)
 
 Tested with:
 
-- macOS 10.15.4
-- Xcode 11.3.1
-
-## Usage
-
-1. Run `./openSSL.sh` for download and build openSSL;
-2. Run `./download.sh` to download and unarchive the projects' source;
-3. Run `./build-ios.sh -e ENVIRONMENT`, where environment is one of;
-4. Run `./lipo-ios.sh` to create fat static libraries from the development and distribution architectures;
-5. Run `./all.sh` to `./clean.sh && ./download.sh && ./build.sh`.
-
-`development`: builds x86_64 static libaries, and builds mpv with debug symbols and no optimization.
-
-`distribution`: builds x86_64 and arm64 static libraries, adds bitcode, and adds `-Os` to optimize for size and speed.
-
-To build for tvOS, run `./build-tv.sh` and `./lipo-tv.sh` instead.
-
-Alternatively, run `./build.sh` to build and create fat static libraries for iOS and tvOS from the development and distribution architectures.
+- macOS 15
+- Xcode 15
 
 ## Brew
 
@@ -40,3 +24,9 @@ https://gist.github.com/dbrookman/74b8bcfb37a23452f7137b83bca9580f
 brew install pkg-config brotli
 brew install --build-from-source --only-dependencies mpv
 ```
+
+## 使用
+
+1. 運行 `./install-openssl.sh` 以生成 tvOS / iOS 所需的 openssl
+2. 運行 `./all.sh` 即可 `./clean.sh && ./download.sh && ./build.sh` 批量執行清理、下載、構建三個步驟。
+3. 等待構建完畢即可，lib 文件夾就是所需要的靜態庫內容。
