@@ -1,6 +1,9 @@
-lib/
+lib-ios/
+lib-tv/
 downloads/
 src/
 scratch-ios/
 scratch-tv/
+openssl-ios/
+openssl-tv/
 openssl/
