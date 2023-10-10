@@ -8,3 +8,4 @@ openssl-ios/
 openssl-tv/
 openssl/
 lib/
+.DS_Store
