@@ -1,5 +1,7 @@
 # mpv iOS build scripts
 
+本腳本的目的是構建 tvOS 和 iOS 可用的 mpv 靜態庫。
+
 These are build scripts for building [libmpv](https://github.com/mpv-player/mpv), and its dependencies:
 
 - FFmpeg
