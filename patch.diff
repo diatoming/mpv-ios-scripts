@@ -50,3 +50,20 @@
          if ([device supportsFamily:MTLGPUFamilyCommon3]) {
              MTLSize threadsPerGrid = MTLSizeMake(width, height, 1);
              [encoder dispatchThreads:threadsPerGrid threadsPerThreadgroup:threadsPerThreadgroup];
+--- src/uchardet-0.0.7/CMakeLists.txt
++++ src/uchardet-0.0.7/CMakeLists.txt
+@@ -3,7 +3,7 @@
+ include(CheckCCompilerFlag)
+ set (PACKAGE_NAME uchardet)
+ project (${PACKAGE_NAME} CXX C)
+-enable_testing()
++# enable_testing()
+ 
+ ######## Package information
+ set (PACKAGE_URL https://www.freedesktop.org/wiki/Software/uchardet/)
+@@ -71,4 +71,4 @@
+ 
+ add_subdirectory(src)
+ add_subdirectory(doc)
+-add_subdirectory(test)
++# add_subdirectory(test)
