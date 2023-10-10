@@ -15,8 +15,8 @@ These are build scripts for building [libmpv](https://github.com/mpv-player/mpv)
 
 Tested with:
 
-- macOS 15
-- Xcode 15
+- macOS 14.0
+- Xcode 15.0
 
 ## Brew
 
