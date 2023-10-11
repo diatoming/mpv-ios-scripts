@@ -32,6 +32,7 @@ done
 sed -i "" "s/typedef ptrdiff_t GLsizeiptr;/typedef intptr_t GLsizeiptr;/" ./src/mpv-$MPV_VERSION/video/out/opengl/gl_headers.h
 
 patch -p0 <patch.diff
+patch -p0 <patch-fix.diff
 
 echo "\033[1;32mDownloaded: \033[0m\n mpv: $MPV_VERSION \
                             \n FFmpeg: $FFMPEG_VERSION \
