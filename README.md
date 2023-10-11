@@ -34,6 +34,8 @@ brew install --build-from-source --only-dependencies mpv
 3. 運行 `./build.sh` 即可開始 Build 的過程。
 4. 運行 `./xcframework.sh` 即可構建 xcframework 庫。
 
+`build.sh` 存在一個 Bug，第一次下載構建時候會失敗，重新執行即可。
+
 本腳本移除了 x86_64 的框架支持。
 
 如果需要更新 openssl 版本號，修改 `install-openssl.sh` 中的 version 即可。
