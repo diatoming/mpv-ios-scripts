@@ -4,6 +4,9 @@ LIBRARIES="libuchardet libfribidi libfreetype libharfbuzz libass libmpv libavcod
 PLATFORMS="ios tv"
 ROOT="$(pwd)"
 LIB="$ROOT/lib"
+
+rm -rf $LIB
+
 mkdir -p $LIB
 
 for LIBRARY in $LIBRARIES; do
@@ -11,10 +14,10 @@ for LIBRARY in $LIBRARIES; do
     for PLATFORM in $PLATFORMS; do
         SCRATCH="$ROOT/scratch-$PLATFORM"
 
-        if [ -d "$SCRATCH/x86_64-development" ] && [ -d "$SCRATCH/arm64-development" ]; then
+        if [ -d "$SCRATCH/arm64-development" ]; then
             ENVIRONMENTS="$ENVIRONMENTS development"
             mkdir -p $SCRATCH/development/$LIBRARY.framework
-            lipo -create $SCRATCH/x86_64-development/lib/$LIBRARY.a $SCRATCH/arm64-development/lib/$LIBRARY.a -o $SCRATCH/development/$LIBRARY.framework/$LIBRARY
+            lipo -create $SCRATCH/arm64-development/lib/$LIBRARY.a -o $SCRATCH/development/$LIBRARY.framework/$LIBRARY
         fi
 
         if [[ -d "$SCRATCH/arm64-distribution" ]]; then

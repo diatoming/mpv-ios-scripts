@@ -29,13 +29,13 @@ brew install --build-from-source --only-dependencies mpv
 
 ## 使用
 
-1. 運行 `./install-openssl.sh` 以生成 tvOS / iOS 所需的 openssl
-2. 運行 `./all.sh` 即可 `./clean.sh && ./download.sh && ./build.sh` 批量執行清理、下載、構建三個步驟。
-3. 等待構建完畢即可，lib 文件夾就是所需要的靜態庫內容。
+1. 運行 `./install-openssl.sh` 以生成 tvOS / iOS 所需的 openssl。
+2. 運行 `./clean.sh && ./download.sh` 執行清理、下載的步驟。
+3. 運行 `./build.sh` 即可開始 Build 的過程。
+4. 運行 `./xcframework.sh` 即可構建 xcframework 庫。
+
+本腳本移除了 x86_64 的框架支持。
 
 如果需要更新 openssl 版本號，修改 `install-openssl.sh` 中的 version 即可。
 並非所有的 openssl 版本號都可用，最後測試 1.1.1w 可正常通過編譯。
-
-本腳本拋棄了 development 參數，不關心 development 的可編譯性問題。
-
 如若遇到缺少 gas-preprocessor 提示，請執行 `install-gas-preprocessor.sh`

@@ -1,3 +1,4 @@
+openssl-src/
 lib-ios/
 lib-tv/
 downloads/
@@ -9,4 +10,3 @@ openssl-tv/
 openssl/
 lib/
 .DS_Store
-openssl-src/

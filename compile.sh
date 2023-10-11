@@ -35,7 +35,7 @@ export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.
 if [[ "$ENVIRONMENT" = "distribution" ]]; then
     ARCHS="arm64"
 elif [[ "$ENVIRONMENT" = "development" ]]; then
-    ARCHS="x86_64 arm64"
+    ARCHS="arm64"
 elif [[ "$ENVIRONMENT" = "" ]]; then
     echo "An environment option is required (-e development or -e distribution)"
     exit 1
@@ -78,6 +78,7 @@ SCRATCH="$ROOT/scratch-$PLATFORM"
 export SRC="$ROOT/src"
 
 for ARCH in $ARCHS; do
+    echo "ARCH -- "$ARCH
     if [[ $ARCH = "arm64" ]]; then
         HOSTFLAG="aarch64"
         CMAKE_OSX_ARCHITECTURES=$ARCH
@@ -101,19 +102,14 @@ for ARCH in $ARCHS; do
         export SDKPATH=$SDKPATH_SIMULATOR
         ACFLAGS="-arch $ARCH -isysroot $SDKPATH $MIN_VERSION_SIMULATOR_CFLAG=$DEPLOYMENT_TARGET"
         ALDFLAGS="-arch $ARCH -isysroot $SDKPATH $MIN_VERSION_SIMULATOR_LDFLAG,$DEPLOYMENT_TARGET -lbz2"
-        OPENSSL="$ROOT/openssl/$PLATFORM$SDK_VERSION-x86_64.sdk"
+        OPENSSL="$ROOT/openssl/$PLATFORM$SDK_VERSION-$HOSTFLAG.sdk"
     else
         echo "Unhandled architecture option"
         exit 1
     fi
 
-    if [[ "$ENVIRONMENT" = "development" ]]; then
-        CFLAGS="$ACFLAGS"
-        LDFLAGS="$ALDFLAGS"
-    else
-        CFLAGS="$ACFLAGS -fembed-bitcode -Os"
-        LDFLAGS="$ALDFLAGS -fembed-bitcode -Os"
-    fi
+    CFLAGS="$ACFLAGS -fembed-bitcode -Os"
+    LDFLAGS="$ALDFLAGS -fembed-bitcode -Os"
     CXXFLAGS="$CFLAGS"
 
     echo "OPENSSL PTAH -->$OPENSSL"
