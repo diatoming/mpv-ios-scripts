@@ -41,3 +41,13 @@ brew install --build-from-source --only-dependencies mpv
 如果需要更新 openssl 版本號，修改 `install-openssl.sh` 中的 version 即可。
 並非所有的 openssl 版本號都可用，最後測試 1.1.1w 可正常通過編譯。
 如若遇到缺少 gas-preprocessor 提示，請執行 `install-gas-preprocessor.sh`
+
+## 最小版本號問題
+
+https://juejin.cn/post/7182833413835980859
+
+追加了最小版本號：15.1
+修改最小版本號需要修改兩個地方：
+
+1. `framework-meta/Info.plist` 把 MinimumOSVersion 改成所需要的值。
+2. `xcframework.sh` 把 Add :MinimumOSVersion string 15.1 的 15.1 改成所需要的值。

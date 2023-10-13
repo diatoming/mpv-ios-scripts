@@ -10,7 +10,9 @@ rm -rf $LIB
 mkdir -p $LIB
 
 for LIBRARY in $LIBRARIES; do
+
     FRAMEWORKS=""
+
     for PLATFORM in $PLATFORMS; do
         SCRATCH="$ROOT/scratch-$PLATFORM"
 
@@ -32,8 +34,14 @@ for LIBRARY in $LIBRARIES; do
             if [[ "$LIBRARY" = "libmpv" ]]; then
                 cp -a $ROOT/framework-meta/libmpv/. $SCRATCH/$ENVIRONMENT/$LIBRARY.framework/
             fi
+
             FRAMEWORKS="$FRAMEWORKS -framework $SCRATCH/$ENVIRONMENT/$LIBRARY.framework"
+
         done
     done
+
     xcodebuild -create-xcframework $FRAMEWORKS -output $LIB/$LIBRARY.xcframework
+
+    FULL_INFO_PLIST_PATH=$LIB"/"$LIBRARY".xcframework/Info.plist"
+    /usr/libexec/PlistBuddy -c "Add :MinimumOSVersion string 15.1" "$FULL_INFO_PLIST_PATH"
 done
