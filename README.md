@@ -51,3 +51,7 @@ https://juejin.cn/post/7182833413835980859
 
 1. `framework-meta/Info.plist` 把 MinimumOSVersion 改成所需要的值。
 2. `xcframework.sh` 把 Add :MinimumOSVersion string 15.1 的 15.1 改成所需要的值。
+
+## Download 版本
+
+更新最適配的版本 mpv 0.35.1 + ffmpeg 4.4.1
