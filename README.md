@@ -54,4 +54,4 @@ https://juejin.cn/post/7182833413835980859
 
 ## Download 版本
 
-更新最適配的版本 mpv 0.35.1 + ffmpeg 4.4.1
+更新最適配的版本 mpv 0.35.1 + ffmpeg 6.0
